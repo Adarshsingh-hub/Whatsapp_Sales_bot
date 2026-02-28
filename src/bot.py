@@ -29,8 +29,8 @@ retriever = vectorstore.as_retriever(
 )
 
 llm = ChatOpenAI(
-    model_name=config.OPENAI_MODEL,
-    openai_api_key=config.OPENAI_API_KEY,
+    model=config.OPENAI_MODEL,
+    api_key=os.getenv("OPENAI_API_KEY"),
     temperature=0.3,
     max_tokens=config.MAX_TOKENS
 )
