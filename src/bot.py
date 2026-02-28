@@ -1,4 +1,5 @@
-from langchain_openai import ChatOpenAI, OpenAIEmbeddings
+from langchain_openai.chat_models import ChatOpenAI
+from langchain_openai.embeddings import OpenAIEmbeddings
 from langchain_chroma import Chroma
 from langchain_core.messages import HumanMessage, SystemMessage, AIMessage
 from src.config import config
@@ -15,7 +16,7 @@ logger = logging.getLogger(__name__)
 
 embeddings = OpenAIEmbeddings(
     model=config.EMBED_MODEL,
-    api_key=os.getenv("OPENAI_API_KEY")
+    api_key=os.environ["OPENAI_API_KEY"]
 )
 
 vectorstore = Chroma(
@@ -30,7 +31,7 @@ retriever = vectorstore.as_retriever(
 
 llm = ChatOpenAI(
     model=config.OPENAI_MODEL,
-    api_key=os.getenv("OPENAI_API_KEY"),
+    api_key=os.environ["OPENAI_API_KEY"],
     temperature=0.3,
     max_tokens=config.MAX_TOKENS
 )
