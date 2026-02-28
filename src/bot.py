@@ -1,7 +1,7 @@
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from langchain_chroma import Chroma
 from langchain_core.messages import HumanMessage, SystemMessage, AIMessage
-from config import config
+from src.config import config
 from sessions import get_session, update_session, mark_qualified, mark_needs_human
 import json
 import logging
