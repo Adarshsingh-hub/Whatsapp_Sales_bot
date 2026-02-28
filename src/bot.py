@@ -5,6 +5,7 @@ from src.config import config
 from src.sessions import get_session, update_session, mark_qualified, mark_needs_human
 import json
 import logging
+import os
 
 logger = logging.getLogger(__name__)
 
@@ -14,7 +15,7 @@ logger = logging.getLogger(__name__)
 
 embeddings = OpenAIEmbeddings(
     model=config.EMBED_MODEL,
-    openai_api_key=config.OPENAI_API_KEY
+    api_key=os.getenv("OPENAI_API_KEY")
 )
 
 vectorstore = Chroma(

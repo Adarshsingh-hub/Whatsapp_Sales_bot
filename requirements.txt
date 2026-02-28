@@ -1,17 +1,20 @@
-langchain-core==0.2.38
-langchain-chroma==0.1.2   # (new recommended chroma wrapper)
-python-multipart==0.0.9   # required for Form() in FastAPI
-twilio
-psycopg2-binary==2.9.9
-typing-extensions==4.12.2
-langchain==0.2.0
-langchain-openai==0.1.7
-langchain-community==0.2.0
-chromadb==0.4.24
-openai==1.30.0
 fastapi==0.111.0
 uvicorn==0.30.0
+python-multipart==0.0.9
 python-dotenv==1.0.0
-pypdf==4.2.0
-tiktoken==0.7.0
 pydantic==2.7.4
+typing-extensions==4.12.2
+
+psycopg2-binary==2.9.9
+twilio
+
+langchain==0.2.6
+langchain-core==0.2.10
+langchain-community==0.2.5
+langchain-openai==0.1.7
+langchain-chroma==0.1.2
+
+openai==1.30.1
+tiktoken==0.7.0
+chromadb==0.5.3
+pypdf==4.2.0
