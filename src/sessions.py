@@ -1,5 +1,5 @@
 from datetime import datetime, timedelta
-from config import config
+from src.config import config
 
 # Store sessions in memory
 sessions: dict = {}

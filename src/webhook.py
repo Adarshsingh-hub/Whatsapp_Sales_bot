@@ -1,7 +1,7 @@
 from fastapi import FastAPI, Form, Response
 from twilio.rest import Client
 from twilio.twiml.messaging_response import MessagingResponse
-from config import config
+from src.config import config
 from bot import process_message
 from sessions import get_session
 from leads import create_leads_table, save_lead
